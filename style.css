@@ -1,0 +1,62 @@
+
+body {
+  background-image: url(memphis-mini.png);
+}
+
+
+.page-wrap {
+  width: 500px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+
+
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin: 20px;
+}
+
+.form-control {
+  display: inline-block;
+  width: 300px;
+  margin: 0;
+}
+
+.btn-primary {
+  width: 100px;
+  border-radius: 50px;
+  margin-left: 20px;
+}
+
+
+.remove {
+  background: #D9544F;
+
+  height: 20px;
+  width: 20px;
+
+
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+
+  padding: 0;
+  margin-left: 10px;
+  line-height: 0.2;
+
+  border-radius: 25px;
+}
+
+.done {
+  color: #cccccc;
+  text-decoration: line-through;
+}
+
+
+
