@@ -14,18 +14,28 @@ li.forEach((l) => {
 // listItem
 function listItemMaker(listNode) {
 	addEventListenerStrikethrough(listNode);
-	addDeleteButton(listNode);
+	// addDeleteButton(listNode);
 }
 
 function addEventListenerStrikethrough(listTag){
 	listTag.addEventListener("click", ()=>{
 		listTag.classList.toggle("done");
+
+		if (listTag.childElementCount === 0){
+			addDeleteButton(listTag);
+		} else {
+			listTag.removeChild(listTag.firstElementChild);
+		}
+
+
 	})
 }
 // listItem - delete button
 function addDeleteButton(listTag){
 	var deleteButton = document.createElement("button");
-	deleteButton.innerHTML = "Delete";
+	deleteButton.classList.add("remove");
+	deleteButton.innerHTML = "-";
+
 	addEventListenerForDeleteButton(deleteButton);
 
 	listTag.appendChild(deleteButton);
